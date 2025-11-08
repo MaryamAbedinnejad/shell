@@ -29,7 +29,7 @@ unzip -q rawdata.zip
 # Complete assignment here
 
 # 1. Create a directory named data
-Mkdir data
+Mkdir data #create data directory
 
 # 2. Move the ./rawdata directory to ./data/raw
 Mv rawdata data/raw 
@@ -45,6 +45,7 @@ cp ./data/raw/*event*.log ./data/processed/event_logs/
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 rm ./data/raw/*ipaddr* 2>/dev/null
+
 rm ./data/processed/user_logs/*ipaddr* 2>/dev/null
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 find ./data/processed -type f > ./data/inventory.txt && nano ./data/inventory.txt
